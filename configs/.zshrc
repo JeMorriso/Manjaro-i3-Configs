@@ -106,3 +106,5 @@ source $ZSH/oh-my-zsh.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+
+eval "$(dircolors ~/.dircolors)"
