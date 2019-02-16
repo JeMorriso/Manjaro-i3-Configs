@@ -117,6 +117,21 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 hide_edge_borders both
 
 ################################################
+
+################## MULTI-MONITOR CONFIG ########
+
+workspace $ws1  output eDP1
+workspace $ws2  output eDP1
+workspace $ws3  output DP1
+workspace $ws4  output eDP1
+workspace $ws5  output eDP1
+workspace $ws6  output DP1
+workspace $ws7  output DP1
+workspace $ws8  output DP1
+workspace $ws9  output DP1
+workspace $ws10 output eDP1
+
+################################################
  
 ################# KEY BINDINGS #################
 
@@ -204,7 +219,7 @@ bindsym $mod+1 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces
 bindsym $mod+2 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/terminals.sh
 bindsym $mod+3 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/vscode.sh 
 bindsym $mod+4 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-reference.sh
-bindsym $mod+5 workspace $ws5
+bindsym $mod+5 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-work.sh
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-productivity.sh
