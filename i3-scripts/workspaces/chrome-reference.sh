@@ -16,7 +16,9 @@ then
 		https://github.com/ranger/ranger/wiki/Official-user-guide \
 		https://code.visualstudio.com/docs/getstarted/tips-and-tricks \
 		https://www.jetbrains.com/help/pycharm/keyboard-shortcuts-by-category.html \
-		https://blog.hubspot.com/sales/chrome-keyboard-shortcuts
+		https://blog.hubspot.com/sales/chrome-keyboard-shortcuts \
+		https://wiki.archlinux.org/index.php/Pacman \ 
+		https://git-scm.com/docs
 fi
 
 
