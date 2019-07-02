@@ -60,8 +60,8 @@ exec --no-startup-id redshift-gtk
 exec compton -f
 
 # startup programs
-# terminals in workspace 2
-exec "$config_dir/i3-scripts/workspaces/terminals.sh"
+# terminals in workspace 4
+exec "$config_dir/i3-scripts/workspaces/terminals.sh 4"
 
 ################################################
 
