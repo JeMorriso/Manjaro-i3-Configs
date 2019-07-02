@@ -1,0 +1,2 @@
+- create 10 gig NTFS partition to share between windows and linux
+- mount it on startup using /etc/fstab - see archwiki

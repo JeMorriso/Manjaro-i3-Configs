@@ -7,9 +7,7 @@ i3-msg "workspace $ws"
 # assumes that if there is content, then it's correct. 
 if [ $( i3-save-tree --workspace $ws | wc -l ) -lt 2 ]
 then
-	i3-msg  "append_layout ~/.i3/workspace_2.json"
-	(tilix &)
-	(tilix &)
+	exec google-chrome-stable
 fi
 
 

@@ -3,13 +3,11 @@
 # so if I have exec google-chrome-stable then chrome will load whenever i3 does since that is a COMMAND defined here.
 # if i have for_window [class="Google-chrome-stable"] move to workspace $workspaceX  then chrome will always be moved to workspace X, since that is a RULE defined here.
 
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 ################# VARIABLES ####################
 
 set $term "tilix"
+
+set $config_dir /home/jerry/master-configs-and-scripts
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -61,22 +59,9 @@ exec --no-startup-id redshift-gtk
 
 exec compton -f
 
-# startup programs - TODO fix these
-#exec /home/jerry/i3-scripts/chrome-reference.sh
+# startup programs
 # terminals in workspace 2
-exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/terminals.sh
-# key binding reference in workspace 4
-
-#exec thunar
-#exec tilix -e ranger
-#sleep 5
-#exec i3-msg 'workspace $ws1; exec thunar; sleep 3; exec $term -e ranger'
-# terminals in workspace 2
-
-#exec i3-msg 'sleep 5; workspace $ws2; exec $term; exec $term; sleep 3'
-#exec i3-msg 'sleep 5; workspace $ws9; exec google-chrome-stable; sleep 3; workspace $ws2'
-# chrome workspace 9 from program rule
-#exec google-chrome-stable
+exec "$config_dir/i3-scripts/workspaces/terminals.sh"
 
 ################################################
 
@@ -121,15 +106,15 @@ hide_edge_borders both
 ################## MULTI-MONITOR CONFIG ########
 
 workspace $ws1  output eDP1
-workspace $ws2  output eDP1
+workspace $ws2  output DP1
 workspace $ws3  output DP1
 workspace $ws4  output eDP1
 workspace $ws5  output eDP1
-workspace $ws6  output DP1
-workspace $ws7  output DP1
-workspace $ws8  output DP1
-workspace $ws9  output DP1
-workspace $ws10 output eDP1
+workspace $ws6  output eDP1
+workspace $ws7  output eDP1
+workspace $ws8  output eDP1
+workspace $ws9  output eDP1
+workspace $ws10 output DP1
 
 ################################################
  
@@ -215,16 +200,16 @@ bindsym $mod+Shift+p	resize grow width 10 px or 10 ppt
 
 # switch to workspace / workspace specific bindings
 # TO DO: figure out i3 variables in bash scripts
-bindsym $mod+1 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/file-managers.sh
-bindsym $mod+2 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/terminals.sh
-bindsym $mod+3 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/vscode.sh 
-bindsym $mod+4 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-reference.sh
-bindsym $mod+5 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-work.sh
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-productivity.sh
-bindsym $mod+9 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/chrome-relax.sh
-bindsym $mod+0 exec /home/jerry/master-configs-and-scripts/i3-scripts/workspaces/spotify.sh
+bindsym $mod+1 exec "$config_dir/i3-scripts/workspaces/open-chrome-dynamic-workspace.sh 1"
+bindsym $mod+2 exec "$config_dir/i3-scripts/workspaces/open-chrome-dynamic-workspace.sh 2"
+bindsym $mod+3 exec "$config_dir/i3-scripts/workspaces/vscode.sh 3"
+bindsym $mod+4 exec "$config_dir/i3-scripts/workspaces/terminals.sh 4"
+bindsym $mod+5 exec "$config_dir/i3-scripts/workspaces/reference.sh 5"
+bindsym $mod+6 exec "$config_dir/i3-scripts/workspaces/chrome-productivity.sh 6"
+bindsym $mod+7 exec "$config_dir/i3-scripts/workspaces/file-managers.sh 7"
+bindsym $mod+8 exec "$config_dir/i3-scripts/workspaces/spotify.sh 8"
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
