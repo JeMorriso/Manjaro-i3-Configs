@@ -106,15 +106,15 @@ hide_edge_borders both
 ################## MULTI-MONITOR CONFIG ########
 
 workspace $ws1  output eDP1
-workspace $ws2  output DP1
-workspace $ws3  output DP1
+workspace $ws2  output HDMI1
+workspace $ws3  output HDMI1
 workspace $ws4  output eDP1
 workspace $ws5  output eDP1
 workspace $ws6  output eDP1
 workspace $ws7  output eDP1
 workspace $ws8  output eDP1
 workspace $ws9  output eDP1
-workspace $ws10 output DP1
+workspace $ws10 output HDMI1
 
 ################################################
  
